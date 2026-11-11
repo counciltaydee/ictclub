@@ -136,6 +136,12 @@
       margin-bottom: 0.6rem;
     }
 
+    .source {
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
     .sidebar {
       display: grid;
       gap: 0.8rem;
@@ -215,11 +221,14 @@
       <div class="header-row">
         <div>
           <h1>ICT Club Blog</h1>
-          <p>Stories, tutorials, and event highlights from our school ICT community.</p>
+          <p>Weekly reviews, tutorials, and event highlights from our school ICT community.</p>
         </div>
       </div>
       <nav class="main-nav" aria-label="Blog sections">
         <button class="active" data-view="all">All Posts</button>
+        <button data-view="enterprise">Enterprise Tech</button>
+        <button data-view="science">Sci-Tech</button>
+        <button data-view="education">Edu-Tech</button>
         <button data-view="tutorial">Tutorials</button>
         <button data-view="events">Events</button>
         <button data-view="projects">Projects</button>
@@ -239,6 +248,27 @@
       <section class="card" style="margin-top: 0.85rem;">
         <h2 class="section-head">Latest Posts</h2>
         <div id="post-list" class="post-grid">
+          <article class="card post-card" data-category="enterprise">
+            <span class="label">Enterprise Tech</span>
+            <h3>Enterprise Tech Weekly: AI Infrastructure Gets Bigger, Smarter, and Harder to Govern</h3>
+            <p class="meta">November 11, 2026 · 6 min read</p>
+            <p>From Google’s reported $15 billion Malaysian AI infrastructure plan to Anthropic’s new enterprise models and a fresh wave of connected-device attacks, this week showed that business technology is now a race between scale and control.</p>
+            <p><a class="source" href="https://techstartups.com/2026/11/04/top-tech-news-roundup-for-today-november-4-2026-googles-15b-ai-bet-metas-e53b-bond-demand-canvas-restructuring-and-spacexs-5g-push/" target="_blank" rel="noopener">Read the reporting →</a></p>
+          </article>
+          <article class="card post-card" data-category="science">
+            <span class="label">Sci-Tech</span>
+            <h3>Sci-Tech Weekly: Webb, the Moon, and a More Dynamic Planet</h3>
+            <p class="meta">November 11, 2026 · 6 min read</p>
+            <p>New Webb observations of an unusually pristine early galaxy, unexpected iron in Chang’e-6 lunar samples, and changing Antarctic ocean layers made this a week of reminders that the most important discoveries often complicate the old picture.</p>
+            <p><a class="source" href="https://scitechdaily.com/" target="_blank" rel="noopener">Explore the science desk →</a></p>
+          </article>
+          <article class="card post-card" data-category="education">
+            <span class="label">Edu-Tech</span>
+            <h3>Edu-Tech Weekly: Schools Move from AI Experiments to AI Readiness</h3>
+            <p class="meta">November 11, 2026 · 5 min read</p>
+            <p>Universities expanded access to ChatGPT Edu and Codex, teachers’ unions pushed for stronger AI privacy commitments, and school leaders kept asking the practical question: how do we train people before we scale the tools?</p>
+            <p><a class="source" href="https://www.edweek.org/technology" target="_blank" rel="noopener">Read the education technology coverage →</a></p>
+          </article>
           <article class="card post-card" data-category="tutorial">
             <span class="label">Tutorial</span>
             <h3>Beginner Guide to HTML for ICT Students</h3>
@@ -272,6 +302,9 @@
         <h2 class="section-head">Categories</h2>
         <ul class="category-list" id="category-filter">
           <li><button class="active" data-filter="all">All</button></li>
+          <li><button data-filter="enterprise">Enterprise Tech</button></li>
+          <li><button data-filter="science">Sci-Tech</button></li>
+          <li><button data-filter="education">Edu-Tech</button></li>
           <li><button data-filter="tutorial">Tutorials</button></li>
           <li><button data-filter="events">Events</button></li>
           <li><button data-filter="projects">Projects</button></li>
